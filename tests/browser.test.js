@@ -34,3 +34,16 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+describe('Clicking "Poppa stacken!"', () => {
+    it('shoul remove and open up alert that tells the user which element has been removed', async () => {
+        const popBtn = await driver.findElement(By.id('pop'));
+        await popBtn.click();
+
+        const alert = await driver.switchTo().alert();
+        const getAlert = await alert.getText(); 
+
+        await alert.accept();
+        expect(getAlert).toMatch("Tog bort Morötter");
+    });
+}); 
