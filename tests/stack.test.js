@@ -23,5 +23,5 @@ test('pop should remove and return the top element from the stack', () => {
     stack.push("green");
     stack.push("blue");
     expect(stack.pop()).toBe("blue");
-    expect(stack.peek()).toBe("yellow");
+    expect(stack.peek()).toBe("green");
 });

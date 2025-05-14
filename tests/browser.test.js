@@ -44,6 +44,6 @@ describe('Clicking "Poppa stacken!"', () => {
         const getAlert = await alert.getText(); 
 
         await alert.accept();
-        expect(getAlert).toMatch("Tog bort Morötter");
+        expect(getAlert).toMatch("Tog bort Bananer");
     });
 }); 
